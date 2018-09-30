@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset204 PTSans-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl640\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 DS Mini-Assignment #3\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\b0\fs24 \cf2 Create a program that stores words in a Hash Table and then searches for the words.\
+\pard\pardeftab720\sl460\sa298\partightenfactor0
+
+\b\fs36 \cf2 Requirements\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\b0\fs24 \cf2 You will keep track of words that are 20 or fewer characters long.\'a0 The nodes that you will create as structs will contain an array of char of length 21 and a pointer to the next node.\'a0 Call this struct WordNode.\
+In main, declare an array variable to contain your hash table.\'a0 Let the array buckets contain pointers to WordNodes.\'a0 The size of the array is 11.\'a0\
+Create a loop that gets one word at a time from the user until they enter "." as the only thing on the input line.\
+Each time you get a word, pass the word as a parameter to a hash function.\'a0 This hash function must call the djb2 function (from the hash tables lecture; change the parameter to work with chars rather than unsigned chars) and then use the Division Method to return a value between 0 and 10 (inclusive) as a hash value.\'a0 Use this returned hash value to determine which bucket should contain the word.\'a0 Then add the word to the bucket as described in lecture. Make sure that your linked lists are sorted linked lists, sorted in ascending order (e.g. "alpha" would occur before "theta").\'a0 They do not have to have a tail or prev pointers but they can if you want (the tail pointer would now have to be in the bucket along with the head pointer).\
+Once the user is done entering words, set up a separate loop to get input for words to search for.\'a0 Then search for the words in the hash table by determining the appropriate bucket and searching the linked list found there (if there is one).\'a0 Every time you do a comparison in your search, use printf() (or cout) to display the word you are comparing your search word against.\'a0 When you find the word, use printf() (or cout) to display "Success!".\'a0 If you don't find the word, use printf() (or cout) to display "Not there!".\'a0 This will continue in a loop until the user enters "." as the only thing on the input line.\
+You should comment as normal.\
+}
